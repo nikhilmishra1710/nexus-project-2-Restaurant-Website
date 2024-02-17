@@ -44,7 +44,7 @@ function checkUser() {
     } else {
         username.innerHTML = "user";
     }
-    alert("byeeeeeeeeeeee")
+    // alert("byeeeeeeeeeeee")
 }
 
 async function validateUser() {
@@ -62,7 +62,7 @@ async function validateUser() {
             });
 
             const data = await res.json();
-            console.log(data)
+            // console.log(data)
             if (data.isSuccess === false) {
                 localStorage.removeItem("user");
             }
@@ -79,7 +79,7 @@ function logout() {
 
 window.onload = () => {
     console.log(menu_link,login_check,user,auth_btn)
-    alert("helloooo")
+    // alert("helloooo")
     validateUser();
     checkUser();
 };
