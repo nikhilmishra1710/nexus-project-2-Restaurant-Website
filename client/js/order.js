@@ -56,7 +56,7 @@ async function placeOrder() {
     console.log(`Today's date is ${formattedDate}`);
 
     try {
-        const res = await fetch("http://localhost:3000/place-order", {
+        const res = await fetch("https://foody-moody-server.onrender.com/place-order", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

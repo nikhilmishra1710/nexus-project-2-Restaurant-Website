@@ -44,7 +44,7 @@ async function validateLogin(){
         //USER VALIDATION LOGIC
         alert("BYEEEEEEE")
         try{
-            const res=await fetch("http://localhost:3000/login",{
+            const res=await fetch("https://foody-moody-server.onrender.com/login",{
                 "method":"POST",
                 "headers":{
                     "Content-Type":"application/json",
@@ -96,7 +96,7 @@ async function validateSignup(){
     }else{
         //USER ADDITION LOGIC
         try{
-            const res=await fetch("http://localhost:3000/signup",{
+            const res=await fetch("https://foody-moody-server.onrender.com/signup",{
                 "method":"POST",
                 "headers":{
                     "Content-Type":"application/json",

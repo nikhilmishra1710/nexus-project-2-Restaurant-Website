@@ -42,7 +42,7 @@ function checkUser() {
 async function validateUser() {
     if (user) {
         try {
-            const res = await fetch("http://localhost:3000/validate-user-token", {
+            const res = await fetch("https://foody-moody-server.onrender.com/validate-user-token", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
