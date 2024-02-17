@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://kit.fontawesome.com/3121321f07.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main_container">
+        <div class="container glass">
+            <div class="login active">
+                <div class="input_field">
+                    <p class="header">LOGIN<br>TO<br>FOODY MOODY</p>
+                </div>
+                <div class="input_field">
+                    <p class="login_error"></p>
+                </div>
+                <div class="input_field">
+                    
+                    <input type="text" oninput="removeError()" name="username" id="uname_login" placeholder="username">
+                    <span>username   <i class="fa-regular fa-user"></i></span>
+                </div>
+    
+                <div class="input_field">
+                    
+                    <input type="password" oninput="removeError()" name="passwd" id="passwd_login" placeholder="password">
+                    <span>password   <i class="fa-solid fa-lock"></i></span>
+                </div>
+    
+                <div class="text_field">
+                    <span class="left link">Forgot Password</span>
+                    <span class="right link" onclick="changeEvent()">New here? </span>
+                </div>
+    
+                <div class="btn-field">
+                    
+                    <button class="btn glass2" type="button " onclick="validateLogin()">LOGIN</button>
+                </div>
+            </div>
+            <div class="signup ">
+                <div class="input_field">
+                    <p class="header">SIGNUP <br>TO<br>FOODY MOODY</p>
+                </div>
+                <div class="input_field">
+                    <p class="signup_error"></p>
+                </div>
+                <div class="input_field">
+                    
+                    <input type="text" oninput="removeError()" name="name" id="name" placeholder="Your name">
+                    <span>Your name   <i class="fa-regular fa-user"></i></span>
+                </div>
+                
+                <div class="input_field">
+                    
+                    <input type="text" oninput="removeError()" name="email" id="email" placeholder="Email">
+                    <span>Email   <i class="fa-regular fa-envelope"></i></span>
+                </div>
+                <div class="input_field">
+                    
+                    <input type="text" oninput="removeError()" name="username" id="username" placeholder="username">
+                    <span>username   <i class="fa-regular fa-user"></i></span>
+                </div>
+    
+                <div class="input_field">
+                    
+                    <input type="password" oninput="removeError()" name="passwd" id="passwd" placeholder="password">
+                    <span>password   <i class="fa-solid fa-lock"></i></span>
+                    
+                </div>
+                
+                <div class="text_field">
+                    
+                    <span class="left link" onclick="changeEvent()">Already have an account?</span>
+                </div>
+    
+                <div class="btn-field">
+                    
+                    <button class="btn glass2" onclick="validateSignup()" type="button ">SIGNUP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/login.js"></script>
+</body>
+</html>

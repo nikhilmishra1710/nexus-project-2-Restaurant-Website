@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order</title>
+        <link rel="stylesheet" href="css/order.css">
+    </head>
+    <body>
+        <!--Order-->
+        <div class="alert">ORDER FAILED</div>
+        <div class="order" id="Order">
+            <h1><span>Order</span>Now</h1>
+
+            <div class="order_main">
+                <div class="order_image">
+                    <img src="img/order now.jpeg" />
+                </div>
+
+                <div class="form">
+                    <div class="input">
+                        <p>Name</p>
+                        <input required type="text" id="name" placeholder="your name" />
+                    </div>
+
+                    <div class="input">
+                        <p>Email</p>
+                        <input required type="email" id="email" placeholder="your email" />
+                    </div>
+
+                    <div class="input">
+                        <p>Number</p>
+                        <input required type="tel" id="phone" placeholder="your number" />
+                    </div>
+
+                    <div class="input">
+                        <p>Address</p>
+                        <input required type="text" id="addr" placeholder="your Address" />
+                    </div>
+
+                    <div class="input">
+                        <p>You Order</p>
+                        <select required id="item" oninput="check()">
+                            <option value="None" disabled selected hidden>Select your order</option>
+                            <option value="Normal_burger">Normal burger</option>
+                            <option value="Cburger">Cheese burger</option>
+                            <option value="pizza">pizza</option>
+                            <option value="Cpizza">Cheese pizza</option>
+                            <option value="pasta">Pasta</option>
+                            <option value="noodles">Noodles</option>
+                            <option value="dabeli">Dabeli</option>
+                            <option value="masala dosa">Masala Dosa</option>
+                            <option value="Aloo tikki">Aloo tikki chaat</option>
+                            <option value="samosa">Samosa</option>
+                            <option value="momos">Momos</option>
+                            <option value="chole kulche">Stuff chole kulche</option>
+                            <option value="paneer tikka">Paneer tikka</option>
+                            <option value="chicken burger">Chicken Burger</option>
+                            <option value="chicken fry pack">Chicken Fry Pack</option>
+                        </select>
+                    </div>
+
+                    <div class="input">
+                        <p>How Much</p>
+                        <input required type="number" id="quantity" oninput="update()" disabled placeholder="how many order" />
+                    </div>
+                    <div class="input">
+                        <p>Cost</p>
+                        <input required id="cost" readonly placeholder="Rs. 00" />
+                    </div>
+                    <br />
+                    <button onclick="placeOrder()" class="order_btn">Order Now</button>
+                    <button onclick="returnHome()" class="order_btn">Go back</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/order.js">
+            
+        </script>
+    </body>
+</html>
