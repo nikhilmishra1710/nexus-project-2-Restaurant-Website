@@ -22,6 +22,7 @@ function check() {
     if (order !== "None") {
         document.getElementById("quantity").disabled = false;
     }
+    update()
 }
 
 function update() {
@@ -44,10 +45,8 @@ async function placeOrder() {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
-    console.log(phone);
     const addr = document.getElementById("addr").value;
     const item = document.getElementById("item").value;
-
     const quantity = document.getElementById("quantity").value;
     const cost = document.getElementById("cost").value;
     const today = new Date();
