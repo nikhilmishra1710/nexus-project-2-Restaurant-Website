@@ -36,6 +36,7 @@ const logIn=async (req,res)=>{
 
         if(user){
             const match=bcrypt.compare(req.headers.password,user.password)
+            console.log("match",match)
             if(match){
                 const token=jwt.sign(user.toJSON(),process.env.SECRET_KEY,{expiresIn:"24h"})
                 res.status(200).json({"isSuccess":true,"msg":"Login successful!","user":JSON.stringify({"token":token,"username":user.username,"name":user.name,"email":user.email})})
