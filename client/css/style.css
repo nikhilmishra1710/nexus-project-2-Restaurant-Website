@@ -144,6 +144,11 @@ input::placeholder{
     color: beige;
 }
 
+button:disabled{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 .left{
     float: left;
 }
@@ -154,8 +159,11 @@ input::placeholder{
 
 .login_error,.signup_error{
     color: red;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
+    font-family: "Philosopher",sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .link{
