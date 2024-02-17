@@ -35,12 +35,13 @@ function changeEvent(){
 async function validateLogin(){
     const uname=document.querySelector("#uname_login").value;
     const pwd=document.querySelector("#passwd_login").value;
-
+    const btn=document.querySelector(".login_btn");
     if(uname===""){
         login_error.innerHTML="Enter a Username"
     }else if(pwd===""){
         login_error.innerHTML="Enter a Password"
     }else{
+        btn.disabled=true;
         //USER VALIDATION LOGIC
         // alert("BYEEEEEEE")
         try{
@@ -63,11 +64,13 @@ async function validateLogin(){
                 window.location.href = "home.html";
             }else{
                 login_error.innerHTML=data.msg
+                btn.disabled=false
             }
 
         }catch(error){
             console.log(error)
             login_error.innerHTML="Unable to connect to server!!"
+            btn.disabled=false
         }
     }
 }
@@ -78,7 +81,7 @@ async function validateSignup(){
     const uname=document.querySelector("#username").value;
     const pwd=document.querySelector("#passwd").value;
     // console.log(name,email,uname,pwd)
-
+    const btn=document.querySelector(".signup_btn");
     if(name===""){
         signup_error.innerHTML="Enter your First name"
     }else if(uname===""){
@@ -111,18 +114,20 @@ async function validateSignup(){
             })
 
             const data=await res.json()
-            console.log(data)
+            // console.log(data)
 
             if(data.isSuccess){
                 localStorage.setItem("user",data.user)
                 window.location.href = "home.html";
             }else{
-                login_error.innerHTML=data.msg
+                signup_error.innerHTML=data.msg
+                btn.disabled=false
             }
 
         }catch(error){
             console.log(error)
-            login_error.innerHTML="Unable to connect to server!!"
+            signup_error.innerHTML="Unable to connect to server!!"
+            btn.disabled=false
         }
     }
 }
