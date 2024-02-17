@@ -42,7 +42,7 @@ async function validateLogin(){
         login_error.innerHTML="Enter a Password"
     }else{
         //USER VALIDATION LOGIC
-        alert("BYEEEEEEE")
+        // alert("BYEEEEEEE")
         try{
             const res=await fetch("https://foody-moody-server.onrender.com/login",{
                 "method":"POST",
@@ -57,10 +57,10 @@ async function validateLogin(){
             })
 
             const data=await res.json()
-            console.log(data)
+            // console.log(data)
             if(data.isSuccess){
                 localStorage.setItem("user",data.user)
-                window.location.href = "/home.html";
+                window.location.href = "home.html";
             }else{
                 login_error.innerHTML=data.msg
             }
@@ -77,7 +77,7 @@ async function validateSignup(){
     const email= document.querySelector("#email").value;
     const uname=document.querySelector("#username").value;
     const pwd=document.querySelector("#passwd").value;
-    console.log(name,email,uname,pwd)
+    // console.log(name,email,uname,pwd)
 
     if(name===""){
         signup_error.innerHTML="Enter your First name"
