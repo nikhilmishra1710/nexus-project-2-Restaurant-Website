@@ -9,11 +9,18 @@ function checkUser() {
         if (user) {
             ele.href = "menu.html";
         } else {
+            console.log("no user found")
             ele.removeAttribute("href");
             ele.style.cursor = "not-allowed";
             ele.classList.toggle("menu_block");
             ele.addEventListener("mouseover", () => {
                 login_check.style.display = "block";
+            });
+            ele.addEventListener("click", () => {
+                login_check.style.display = "block";
+                setTimeout(()=>{
+                    login_check.style.display = "none";
+                },2500)
             });
             ele.addEventListener("mouseout", () => {
                 login_check.style.display = "none";
@@ -37,6 +44,7 @@ function checkUser() {
     } else {
         username.innerHTML = "user";
     }
+    alert("byeeeeeeeeeeee")
 }
 
 async function validateUser() {
@@ -54,7 +62,7 @@ async function validateUser() {
             });
 
             const data = await res.json();
-
+            console.log(data)
             if (data.isSuccess === false) {
                 localStorage.removeItem("user");
             }
@@ -70,6 +78,8 @@ function logout() {
 }
 
 window.onload = () => {
+    console.log(menu_link,login_check,user,auth_btn)
+    alert("helloooo")
     validateUser();
     checkUser();
 };
