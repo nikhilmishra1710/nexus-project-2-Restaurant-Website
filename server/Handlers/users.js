@@ -23,7 +23,7 @@ const signUp=async (req,res)=>{
         res.status(200).json({"isSuccess":true,"msg":"Signup successful!","user":JSON.stringify({"token":token,"username":user.username,"name":user.name,"email":user.email})})
         
     }catch(error){
-        res.status(400).json({"isSuccess":false,"msg":error.message})
+        res.status(400).json({"isSuccess":false,"msg":"Email Id already present use another"})
     }
 }
 
