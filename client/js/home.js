@@ -78,7 +78,7 @@ function logout() {
 }
 
 window.onload = () => {
-    console.log(menu_link,login_check,user,auth_btn)
+    // console.log(menu_link,login_check,user,auth_btn)
     // alert("helloooo")
     validateUser();
     checkUser();
